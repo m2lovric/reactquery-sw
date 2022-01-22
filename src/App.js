@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Planets from './components/Planets';
 import People from './components/People';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 
 function App() {
   const [page, setPage] = useState('planets');
@@ -14,6 +15,7 @@ function App() {
         <Navbar setPage={setPage} />
         <section className='content'>{page === 'planets' ? <Planets /> : <People />}</section>
       </main>
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
