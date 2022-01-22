@@ -15,9 +15,15 @@ const Planets = () => {
   return (
     <section>
       <h1>Planets</h1>
-      <button onClick={() => setPage(1)}>Page 1</button>
-      <button onClick={() => setPage(2)}>Page 2</button>
-      <button onClick={() => setPage(3)}>Page 3</button>
+      <button onClick={() => setPage(1)} className='btn'>
+        Page 1
+      </button>
+      <button onClick={() => setPage(2)} className='btn'>
+        Page 2
+      </button>
+      <button onClick={() => setPage(3)} className='btn'>
+        Page 3
+      </button>
 
       {status === 'error' && <article>Error fetching data</article>}
       {status === 'loading' && <article>Loading data...</article>}
