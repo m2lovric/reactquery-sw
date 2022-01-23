@@ -16,7 +16,6 @@ function App() {
             <Navbar />
             <Routes>
               <Route path='/' element={<Planets />} />
-              <Route path='/planets' element={<Planets />} />
               <Route path='/people' element={<People />} />
             </Routes>
           </section>
